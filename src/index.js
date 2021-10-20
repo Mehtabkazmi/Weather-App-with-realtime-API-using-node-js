@@ -1,4 +1,5 @@
-const port = process.env.YOUR_PORT || process.env.port || 8004;
+const port = process.env.YOUR_PORT || process.env.port || 5000;
+const server_host = process.env.YOUR_HOST || '0.0.0.0';
 const path = require('path');
 const express = require('express');
 const app = express();
@@ -28,6 +29,6 @@ app.get('*', (req, res) => {
         errmsg:"Oops! 404 Error"
     });
 });
-app.listen(port,"0.0.0.0", () => {
+app.listen(port,server_host, () => {
     console.log(`listening to the port at ${port}`)
 })
