@@ -28,6 +28,6 @@ app.get('*', (req, res) => {
         errmsg:"Oops! 404 Error"
     });
 });
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
     console.log(`listening to the port at ${port}`)
 })
